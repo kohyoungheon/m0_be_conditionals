@@ -54,9 +54,7 @@ while fizzbuzz
         end
     puts "Would you like to play again? (Y/N)"
     reply = gets.chomp.downcase
-    if reply == "y"
-    
-    else
+    if reply != "y"
         fizzbuzz = false
         puts "Okay Bye"
     end

@@ -34,33 +34,63 @@ end
 # If the Integer is a multiple of both 3 and 5, print "FizzBuzz". 
 # If the Integer is not a multiple of either, print the Integer itself.
 
+ 
 
-$continue = true
-def fizzbuzz
-    
+fizzbuzz = true
+
+while fizzbuzz
     puts "-------------------------"
-    puts "Hello! Please enter a whole number!"
+    puts "Please enter a whole number!"
     magic_number = gets.chomp
     magic_number = magic_number.to_i
     if magic_number % 3 == 0 && magic_number % 5 == 0
-        puts "FizzBuzz"
-    elsif magic_number % 3 == 0
-        puts "Fizz"
-    elsif magic_number % 5 == 0
-        puts "Buzz"
-    else
-        puts "Not a multiple of 3 or 5, the magic numuber is #{magic_number}"
-    end
+            puts "FizzBuzz"
+        elsif magic_number % 3 == 0
+            puts "Fizz"
+        elsif magic_number % 5 == 0
+            puts "Buzz"
+        else
+            puts "Not a multiple of 3 or 5, the magic numuber is #{magic_number}"
+        end
     puts "Would you like to play again? (Y/N)"
     reply = gets.chomp.downcase
     if reply == "y"
-       $continue = true
+    
     else
-        $continue = false
+        fizzbuzz = false
         puts "Okay Bye"
     end
+    
+    
 end
 
-while $continue
-    fizzbuzz
-end
+
+# $continue = true
+# def fizzbuzz
+    
+#     puts "-------------------------"
+#     puts "Hello! Please enter a whole number!"
+#     magic_number = gets.chomp
+#     magic_number = magic_number.to_i
+#     if magic_number % 3 == 0 && magic_number % 5 == 0
+#         puts "FizzBuzz"
+#     elsif magic_number % 3 == 0
+#         puts "Fizz"
+#     elsif magic_number % 5 == 0
+#         puts "Buzz"
+#     else
+#         puts "Not a multiple of 3 or 5, the magic numuber is #{magic_number}"
+#     end
+#     puts "Would you like to play again? (Y/N)"
+#     reply = gets.chomp.downcase
+#     if reply == "y"
+#        $continue = true
+#     else
+#         $continue = false
+#         puts "Okay Bye"
+#     end
+# end
+
+# while $continue
+#     fizzbuzz
+# end
